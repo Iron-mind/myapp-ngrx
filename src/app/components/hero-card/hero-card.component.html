@@ -1,3 +1,22 @@
-<p>{{props.name}}</p>
-{{props.id}}
-<img [src]="props.images.sm" alt="img">
+
+<div class="container">
+    <h2>{{props.name}}</h2>
+
+    <div class=" d-flex justify-content-start">
+      
+      <div class="col">
+        <img [src]="props.images.sm" class="img-fluid col" alt="img">
+
+      </div>
+      <div class="col-sm">
+        {{props.work.occupation}}
+        <p>
+            strength: {{props.powerstats.strength}} <br>
+            intelligence: {{props.powerstats.intelligence}} <br>
+            speed: {{props.powerstats.speed}} <br>
+            durability: {{props.powerstats.durability}} <br>
+            power: {{props.powerstats.power}} <br>
+            combat: {{props.powerstats.combat}} <br>
+        </p>
+      </div>
+  </div>

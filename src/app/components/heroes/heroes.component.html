@@ -1,0 +1,7 @@
+<p>heroes works!</p>
+<div *ngIf="(loading$|async)" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<button (click)="stopLoading()">dejar de cargar</button>
+<span class="card" *ngFor="let hero of (topHeroes|async)"><app-hero-card [props]="hero"></app-hero-card></span>
+<a routerLink="/home"><button class="btn btn-secondary">ir a home</button></a> 

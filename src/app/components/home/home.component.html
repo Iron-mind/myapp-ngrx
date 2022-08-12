@@ -1,0 +1,13 @@
+<h1>Home</h1>
+
+<div class="card">
+    <div class="card-header">
+        <button (click)="toSpanish()" class="btn btn-success">Pasar a español</button>
+        <button (click)="toEnglish()" class="btn btn-primary">Pasar a ingles</button>
+    </div>
+    <div class="card-body">
+        my appp
+        {{(dato$| async)}}
+    </div>
+    <a routerLink="/heroes"><button class="btn btn-link">ir a heroes </button></a>
+</div>

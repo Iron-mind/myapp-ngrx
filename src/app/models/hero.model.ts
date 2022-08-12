@@ -76,7 +76,7 @@ export interface Hero {
         
     };
     work: {
-        
+        occupation:''
     };
     connections: {
         

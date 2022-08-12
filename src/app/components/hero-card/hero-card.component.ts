@@ -30,7 +30,9 @@ export class HeroCardComponent implements OnInit {
       hairColor: ''
     },
     biography: {},
-    work: {},
+    work: {
+      occupation:''
+    },
     connections: {},
     images: {
      
@@ -41,9 +43,13 @@ export class HeroCardComponent implements OnInit {
 
     }
   }
+  stats :any[] | undefined 
   constructor() { }
 
   ngOnInit(): void {
+    this.stats = Object.keys(this.props.powerstats)
+    console.log(this.stats);
+    
   }
 
 }

@@ -18,7 +18,7 @@ export class HeroesComponent implements OnInit {
   loading$: Observable<boolean> = new Observable();
   heroes$: Observable<any>= new Observable();
   topHeroes: Observable<Hero[]> | undefined;
-  constructor(private store: Store<appState>, private heroesService: HeroesService) {
+  constructor(private store: Store<appState>) {
 
   }
 
@@ -26,10 +26,6 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
     this.loading$ = this.store.select(selectLoading);
     this.heroes$ = this.store.select(selectHeroes);
-    this.heroesService.getHeroes().subscribe((heroes: any) => {
-      this.store.dispatch(loadHeroesSuccess({ heroes }))
-
-    })
     this.store.dispatch(loadHeroes())
     
     this.topHeroes = this.heroes$.pipe(map(heroes => heroes.slice(0, 5)))

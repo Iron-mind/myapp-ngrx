@@ -10,7 +10,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-
+import { EffectsModule } from '@ngrx/effects';
+import { HeroesEffects } from './effects/heroes.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCER),
-    StoreDevtoolsModule.instrument({name:'my-app-ngrx'})
+    StoreDevtoolsModule.instrument({name:'my-app-ngrx'}),
+    EffectsModule.forRoot([HeroesEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

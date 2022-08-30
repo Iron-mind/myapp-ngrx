@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
-## All in following image was implemented in this proyect
+## All in following image was implemented in this project
 
 ![Alt text](./src/assets/lifecycle.png "a title")
 
